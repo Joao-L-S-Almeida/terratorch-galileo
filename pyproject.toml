@@ -4,6 +4,9 @@ lint.extend-select = ["I"]
 line-length = 99
 exclude = ["anysat"]
 
+[tool.setuptools.packages.find]
+include = ["galileo"]
+
 [project]
 name = "galileo"
 version = "0.1"
@@ -28,11 +31,6 @@ dependencies = [
     "h5py>=3.10.0",
     "scikit-learn>=1.4.1.post1",
     "types-requests",
-    # for evals
-    "fast_pytorch_kmeans",
-    "satlaspretrain-models",
-    "timm",
-    "breizhcrops",
 ]
 
 [project.optional-dependencies]
@@ -40,4 +38,11 @@ dev = [
     "ruff>=0.2.0",
     "mypy>=1.8.0",
     "matplotlib>=3.8.3",
+]
+
+eval = [
+    "fast_pytorch_kmeans",
+    "satlaspretrain-models",
+    "timm",
+    "breizhcrops",
 ]
