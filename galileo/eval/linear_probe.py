@@ -6,7 +6,7 @@ import torch.nn.functional as F
 from einops import rearrange
 from sklearn.metrics import accuracy_score, f1_score
 
-from src.galileo import adjust_learning_rate
+from galileo.galileo import adjust_learning_rate
 
 from .metrics import mean_iou
 

@@ -193,7 +193,7 @@ class CropHarvestEvalBase:
 
     @staticmethod
     def indices_of_ignored(band_groups: OrderedDict, ignore_band_groups: Optional[List]):
-        # copied from src.masking with minor modifications. I think thats ok for now
+        # copied from galileo.masking with minor modifications. I think thats ok for now
         if ignore_band_groups is None:
             return []
         else:

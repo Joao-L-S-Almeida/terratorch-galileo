@@ -4,7 +4,7 @@ import unittest
 import torch
 from einops import repeat
 
-from src.masking import (
+from galileo.masking import (
     MASKING_MODES,
     MAX_MASKING_STRATEGIES,
     SPACE_BAND_GROUPS_IDX,

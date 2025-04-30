@@ -2,7 +2,7 @@ import unittest
 
 import torch
 
-from src.data.utils import (
+from galileo.data.utils import (
     S2_BANDS,
     SPACE_TIME_BANDS,
     SPACE_TIME_BANDS_GROUPS_IDX,

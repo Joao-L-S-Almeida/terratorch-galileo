@@ -2,13 +2,13 @@ import unittest
 
 import torch
 
-from src.data.dataset import (
+from galileo.data.dataset import (
     SPACE_BAND_GROUPS_IDX,
     SPACE_TIME_BANDS_GROUPS_IDX,
     STATIC_BAND_GROUPS_IDX,
     TIME_BAND_GROUPS_IDX,
 )
-from src.loss import mae_loss
+from galileo.loss import mae_loss
 
 
 class TestLoss(unittest.TestCase):

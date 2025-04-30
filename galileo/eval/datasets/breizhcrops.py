@@ -10,7 +10,7 @@ from breizhcrops.datasets.breizhcrops import SELECTED_BANDS
 from einops import repeat
 from torch.utils.data import ConcatDataset, Dataset
 
-from src.data.config import DATA_FOLDER
+from galileo.data.config import DATA_FOLDER
 
 from ..preprocess import normalize_bands
 

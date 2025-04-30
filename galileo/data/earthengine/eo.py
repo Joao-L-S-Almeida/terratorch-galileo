@@ -269,7 +269,7 @@ class EarthEngineExporter:
     Export satellite data from Earth engine. It's called using the following
     script:
     ```
-    from src.data import EarthEngineExporter
+    from galileo.data import EarthEngineExporter
     EarthEngineExporter(dest_bucket="bucket_name").export_for_labels(df)
     ```
     :param check_ee: Whether to check Earth Engine before exporting

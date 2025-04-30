@@ -8,7 +8,7 @@ from einops import rearrange
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-from src.utils import data_dir
+from galileo.utils import data_dir
 
 from ..preprocess import normalize_bands
 

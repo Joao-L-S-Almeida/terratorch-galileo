@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from src.data.dataset import (
+from galileo.data.dataset import (
     SPACE_BAND_GROUPS_IDX,
     SPACE_BANDS,
     SPACE_TIME_BANDS,
@@ -13,7 +13,7 @@ from src.data.dataset import (
     TIME_BANDS,
     Normalizer,
 )
-from src.eval.cropharvest.cropharvest_eval import BANDS, BinaryCropHarvestEval
+from galileo.eval.cropharvest.cropharvest_eval import BANDS, BinaryCropHarvestEval
 
 
 class TestCropHarvest(unittest.TestCase):

@@ -6,7 +6,7 @@ import h5py
 import numpy as np
 import torch
 
-from src.data.dataset import (
+from galileo.data.dataset import (
     SPACE_BANDS,
     SPACE_TIME_BANDS,
     STATIC_BANDS,

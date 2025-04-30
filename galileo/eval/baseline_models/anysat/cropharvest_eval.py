@@ -12,12 +12,12 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.utils import shuffle
 from torch.utils.data import DataLoader, TensorDataset
 
-from src.eval.cropharvest.columns import NullableColumns, RequiredColumns
-from src.eval.cropharvest.datasets import CropHarvest, Task, TestInstance
-from src.eval.cropharvest.datasets import CropHarvestLabels as OrgCropHarvestLabels
-from src.eval.cropharvest.utils import NoDataForBoundingBoxError, memoized
-from src.eval.cropharvest.cropharvest_eval import Hyperparams
-from src.utils import DEFAULT_SEED, data_dir, device
+from galileo.eval.cropharvest.columns import NullableColumns, RequiredColumns
+from galileo.eval.cropharvest.datasets import CropHarvest, Task, TestInstance
+from galileo.eval.cropharvest.datasets import CropHarvestLabels as OrgCropHarvestLabels
+from galileo.eval.cropharvest.utils import NoDataForBoundingBoxError, memoized
+from galileo.eval.cropharvest.cropharvest_eval import Hyperparams
+from galileo.utils import DEFAULT_SEED, data_dir, device
 
 from .cropharvest_bands import BANDS
 from .wrapper import AnySatWrapper

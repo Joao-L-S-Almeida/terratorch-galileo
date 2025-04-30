@@ -4,7 +4,7 @@ import numpy as np
 import torch
 from torch.utils.data import default_collate
 
-from src.masking import (
+from galileo.masking import (
     MASKING_MODES,
     MaskingFunctions,
     batch_subset_mask_galileo,

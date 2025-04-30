@@ -8,7 +8,7 @@ import torch.multiprocessing
 from sklearn.utils import shuffle
 from torch.utils.data import Dataset
 
-from src.utils import DEFAULT_SEED
+from galileo.utils import DEFAULT_SEED
 
 from ..preprocess import impute_bands, impute_normalization_stats, normalize_bands
 

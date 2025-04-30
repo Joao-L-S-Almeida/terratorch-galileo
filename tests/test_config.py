@@ -1,10 +1,10 @@
 # import json
 # import unittest
 
-# from src.data.config import NORMALIZATION_DICT_FILENAME
-# from src.data.dataset import Normalizer
-# from src.galileo import Encoder
-# from src.utils import check_config, config_dir, load_check_config
+# from galileo.data.config import NORMALIZATION_DICT_FILENAME
+# from galileo.data.dataset import Normalizer
+# from galileo.galileo import Encoder
+# from galileo.utils import check_config, config_dir, load_check_config
 
 
 # class TestConfigs(unittest.TestCase):

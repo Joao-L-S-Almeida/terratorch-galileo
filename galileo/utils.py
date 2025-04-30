@@ -267,7 +267,7 @@ def timestamp_dirname(suffix: Optional[str] = None) -> str:
 
 
 def is_bf16_available():
-    # https://github.com/huggingface/transformers/blob/d91841315aab55cf1347f4eb59332858525fad0f/src/transformers/utils/import_utils.py#L275
+    # https://github.com/huggingface/transformers/blob/d91841315aab55cf1347f4eb59332858525fad0f/galileo.transformers/utils/import_utils.py#L275
     # https://github.com/pytorch/pytorch/blob/2289a12f21c54da93bf5d696e3f9aea83dd9c10d/torch/testing/_internal/common_cuda.py#L51
     # to succeed:
     # 1. the hardware needs to support bf16 (arch >= Ampere)

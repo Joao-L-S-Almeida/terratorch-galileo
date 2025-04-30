@@ -138,7 +138,7 @@ PRESTO_S1_DIV_VALUES = [25.0, 25.0]
 PRESTO_S2_SUBTRACT_VALUES = [float(0.0)] * len(OURS_S2_MEAN)
 PRESTO_S2_DIV_VALUES = [float(1e4)] * len(OURS_S2_MEAN)
 
-# https://github.com/zhu-xlab/SSL4EO-S12/blob/main/src/benchmark/
+# https://github.com/zhu-xlab/SSL4EO-S12/blob/main/galileo.benchmark/
 # pretrain_ssl/datasets/SSL4EO/ssl4eo_dataset.py
 S1_MEAN = [-12.54847273, -20.19237134]
 S1_STD = [5.25697717, 5.91150917]
@@ -223,10 +223,10 @@ def impute_normalization_stats(band_info, imputes):
         else:
             # we don't have the band, so impute it
             for impute in imputes:
-                src, tgt = impute
+                galileo. tgt = impute
                 if tgt == band_name:
                     # we have a match!
-                    new_band_info[band_name] = band_info[src]
+                    new_band_info[band_name] = band_info[galileo.
                     break
 
     return new_band_info
@@ -248,10 +248,10 @@ def impute_bands(image_list, names_list, imputes):
         else:
             # we don't have the band, so impute it
             for impute in imputes:
-                src, tgt = impute
+                galileo. tgt = impute
                 if tgt == band_name:
                     # we have a match!
-                    band_idx = names_list.index(src)
+                    band_idx = names_list.index(galileo.
                     new_image_list.append(image_list[band_idx])
                     break
 

@@ -14,7 +14,7 @@ from torch import nn
 from torch.jit import Final
 from torch.nn import functional as F
 
-from src.utils import device
+from galileo.utils import device
 
 PRESTO_S2_BANDS = ["B2", "B3", "B4", "B5", "B6", "B7", "B8", "B8A", "B9", "B11", "B12"]
 PRESTO_S1_BANDS = ["VV", "VH"]

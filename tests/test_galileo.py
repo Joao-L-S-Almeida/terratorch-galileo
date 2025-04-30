@@ -7,24 +7,24 @@ import torch
 from einops import repeat
 
 from single_file_galileo import Encoder as SingleFileEncoder
-from src.data import (
+from galileo.data import (
     SPACE_BAND_GROUPS_IDX,
     SPACE_TIME_BANDS_GROUPS_IDX,
     STATIC_BAND_GROUPS_IDX,
     TIME_BAND_GROUPS_IDX,
     Dataset,
 )
-from src.data.config import CONFIG_FILENAME, ENCODER_FILENAME
-from src.data.dataset import DatasetOutput
-from src.galileo import Decoder, Encoder
-from src.masking import (
+from galileo.data.config import CONFIG_FILENAME, ENCODER_FILENAME
+from galileo.data.dataset import DatasetOutput
+from galileo.galileo import Decoder, Encoder
+from galileo.masking import (
     MASKING_MODES,
     MaskingFunctions,
     batch_mask_space,
     batch_mask_time,
     batch_subset_mask_galileo,
 )
-from src.utils import device, load_check_config
+from galileo.utils import device, load_check_config
 
 DATA_FOLDER = Path(__file__).parents[1] / "data"
 TIFS_FOLDER = DATA_FOLDER / "tifs"

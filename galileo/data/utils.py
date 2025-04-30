@@ -2,13 +2,13 @@ from typing import cast
 
 import torch
 
-from src.data import (
+from galileo.data import (
     SPACE_BAND_GROUPS_IDX,
     SPACE_TIME_BANDS_GROUPS_IDX,
     STATIC_BAND_GROUPS_IDX,
     TIME_BAND_GROUPS_IDX,
 )
-from src.data.dataset import (
+from galileo.data.dataset import (
     SPACE_BANDS,
     SPACE_TIME_BANDS,
     STATIC_BANDS,
@@ -16,7 +16,7 @@ from src.data.dataset import (
     Normalizer,
     to_cartesian,
 )
-from src.data.earthengine.eo import (
+from galileo.data.earthengine.eo import (
     DW_BANDS,
     ERA5_BANDS,
     LANDSCAN_BANDS,
@@ -28,7 +28,7 @@ from src.data.earthengine.eo import (
     VIIRS_BANDS,
     WC_BANDS,
 )
-from src.masking import MaskedOutput
+from galileo.masking import MaskedOutput
 
 DEFAULT_MONTH = 5
 
