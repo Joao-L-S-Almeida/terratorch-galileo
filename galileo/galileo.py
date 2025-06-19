@@ -1429,11 +1429,14 @@ class GalileoWrapper(nn.Module):
         )
         s_t_x, sp_x, t_x, st_x, s_t_m, sp_m, t_m, st_m, _ = output
         if self.do_pool:
-            return self.encoder.average_tokens(s_t_x, sp_x, t_x, st_x, s_t_m, sp_m, t_m, st_m)
+            output = self.encoder.average_tokens(s_t_x, sp_x, t_x, st_x, s_t_m, sp_m, t_m, st_m)
         else:
             # we will be assuming we only want s_t_x, and (for now) that we want all s_2 bands
             # s_t_x has shape [b, h, w, t, c_g, d]
             # and we want [b, h * w, d]
-            return rearrange(
+            output = rearrange(
                 s_t_x[:, :, :, :, s_t_channels, :].mean(dim=3), "b h w c_g d -> b (h w) c_g d"
             ).mean(dim=2)
+
+        return output
+
