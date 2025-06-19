@@ -183,6 +183,7 @@ class FlexiPatchEmbed(nn.Module):
         else:
             weight = self.resize_patch_embed(self.proj.weight, patch_size)
         # Apply conv with resized weights
+
         x = F.conv2d(x, weight, bias=self.proj.bias, stride=patch_size)
 
         if has_time_dimension:
@@ -1267,14 +1268,35 @@ class GalileoWrapper(nn.Module):
 
     def __init__(
         self,
-        pretrained_path: Path,
+        pretrained_path: Path = None,
         patch_size: int = 8,
         month: int = 6,
         do_pool: bool = True,
+        embedding_size: int = 128,
+        depth=2,
+        mlp_ratio=2,
+        num_heads=8,
+        max_sequence_length=24,
+        freeze_projections: bool = False,
+        drop_path: float = 0.0,
+
         add_layernorm_on_exit: bool = True,
     ):
         super().__init__()
-        self.encoder = Encoder.load_from_folder(pretrained_path)
+
+        if pretrained_path:
+            self.encoder = Encoder.load_from_folder(pretrained_path)
+        else:
+            self.encoder = Encoder(max_patch_size = patch_size,
+                                  embedding_size = embedding_size,
+                                  depth=depth,
+                                  mlp_ratio=mlp_ratio,
+                                  num_heads=num_heads,
+                                  max_sequence_length=max_sequence_length,
+                                  freeze_projections=freeze_projections,
+                                  drop_path = drop_path,
+                          )
+
         self.dim = self.encoder.embedding_size
         self.patch_size = patch_size
         self.grid_size: Optional[int] = None
@@ -1391,6 +1413,7 @@ class GalileoWrapper(nn.Module):
         s_t_x, sp_x, t_x, st_x, s_t_m, sp_m, t_m, st_m, month = self.preproccess(
             s2=s2, s1=s1, months=months
         )
+
         output = self.encoder(
             s_t_x,
             sp_x,
