@@ -1271,7 +1271,7 @@ class GalileoWrapper(nn.Module):
         pretrained_path: Path = None,
         patch_size: int = 8,
         month: int = 6,
-        do_pool: bool = True,
+        do_pool: bool = False,
         embedding_size: int = 128,
         depth=2,
         mlp_ratio=2,
